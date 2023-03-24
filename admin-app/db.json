@@ -1,0 +1,81 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Payment",
+            "title": "Setup automatic payment gateway, question fee, policy terms, answer your questions during the checkout process.",
+            "image": "https://tiktok.ecomdymedia.com/img/ic-payment.8036d35d.svg"
+        },
+        {
+            "id": 2,
+            "name": "Create ad account",
+            "title": "How to open ad account, what is missing in process, access permission, condition to open account and much more.",
+            "image": "https://tiktok.ecomdymedia.com/img/ic-createAds.26c0b1f5.svg"
+        },
+        {
+            "id": 3,
+            "name": " Fees & Tax ",
+            "title": "Create and manage base plans, Billing period, fees & tax, edit an existing subscription, Deactivate or reactivate a base plan.",
+            "image": "https://tiktok.ecomdymedia.com/img/ic-fessAndTax.76c10518.svg"
+        },
+        {
+            "id": 4,
+            "name": " Suspended ad account ",
+            "title": " Repeated violations of any TikTok Ads policy can lead to an account suspension. ",
+            "image": "https://tiktok.ecomdymedia.com/img/ic-suspendedAd.f05e8042.svg"
+        },
+        {
+            "id": 5,
+            "name": " Setup ad campaign ",
+            "title": " A campaign allows you to promote your products or services on TikTok, how to set up, and more. ",
+            "image": "https://tiktok.ecomdymedia.com/img/ic-setupAd.85d849b8.svg"
+        },
+        {
+            "id": 6,
+            "name": "Refund ",
+            "title": " Questions and conditions for a refund, when and how long it will take to receive it. ",
+            "image": "https://tiktok.ecomdymedia.com/img/ic-refund.c808287a.svg"
+        },
+        {
+            "id": 7,
+            "name": " Ecomdy ad account  ",
+            "title": "  Benefits and why you need an ad account from Ecomdy media. ",
+            "image": "https://tiktok.ecomdymedia.com/img/ic-ecomdyAd.0ef3a968.svg"
+        }
+    ],
+
+    "questions": [
+        {
+            "id": 1,
+            "title": "What kinds of fees do I have to pay when using Ecomdy's services?"
+        },
+        {
+            "id": 2,
+            "title": "Why do I have to top up minimum $200 before create ad account?"
+        },
+        {
+            "id": 3,
+            "title": "How do I connect to TikTok for Business account?"
+        },
+        {
+            "id": 4,
+            "title": "How do I top up on Ecomdy Platform?"
+        },
+        {
+            "id": 5,
+            "title": "How do I active my credit card on Ecomdy platform?"
+        },
+        {
+            "id": 6,
+            "title": "How do I get OTP?"
+        },
+        {
+            "id": 7,
+            "title": "This is my first time setting up a TikTok ad campaign, any suggestions for me."
+        },
+        {
+            "id": 8,
+            "title": "How do I request a refund?"
+        }
+    ]
+}

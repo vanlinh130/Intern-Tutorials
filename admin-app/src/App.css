@@ -1,0 +1,74 @@
+.faq-item {
+    width: 31.5%;
+}
+
+.faq-item:hover {
+    transition: all 0.5s;
+    visibility: visible;
+    left: 0;
+    background: linear-gradient(to left top, #ff2c9c, #ff287b, #ff395a, #ff5137, #ff6a00);
+    cursor: pointer;
+}
+
+.faq-item img {
+    border-radius: 50%;
+}
+
+.faq-item:hover img {
+    background: white;
+    transition: all 0.5s;
+}
+
+.faq-item:hover h3,
+.faq-item:hover p,
+.faq-item:hover span {
+    color: white;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 1240px) {
+    .faq-item {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .faq-item {
+        width: 100%;
+    }
+}
+
+/* profile */
+.btn-save {
+    background: linear-gradient(128.33deg, #81fff4 -29.89%, #6e44ff 98.77%);
+    margin: 35px 0;
+    border-radius: 25px;
+}
+
+.btn-save:hover {
+    box-shadow: 0 8px 25px -8px #81fff4 !important;
+}
+
+/* login */
+.auth-left {
+    width: 58%;
+}
+
+.auth-right {
+    width: 42%;
+}
+
+.auth-right img {
+    height: 100vh;
+    width: 100%;
+}
+
+.img-login {
+    height: 240px;
+    width: 310px;
+}
+
+.img-login img {
+    width: 100%;
+    height: 100%;
+}
