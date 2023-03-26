@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import images from './../../images/index';
 import { HiOutlineEye, HiOutlineEyeSlash } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
-import { LoginLayout } from '../../components';
+import { LoginLayout, Input } from '../../components';
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
 const Register = () => {
     const [password, setPassword] = useState(true);
@@ -22,42 +23,40 @@ const Register = () => {
                         </div>
 
                         <form>
-                            <div className="form-control relative">
-                                <label className="label pt-4">
-                                    <span className="label-text">Full name</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your full name"
-                                    className="input input-bordered relative"
-                                />
-                            </div>
-                            <div className="form-control relative">
-                                <label className="label pt-4">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your Email"
-                                    className="input input-bordered relative"
-                                />
-                            </div>
-                            <div className="form-control relative">
-                                <label className="label pt-4">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your password"
-                                    className="input input-bordered relative"
-                                />
-                                <div
-                                    className="absolute right-0 bottom-4 px-5 cursor-pointer hover:opacity-90 text-slate-500"
-                                    onClick={() => setPassword(!password)}
-                                >
-                                    {password ? <HiOutlineEye /> : <HiOutlineEyeSlash />}
-                                </div>
-                            </div>
+                            <Input
+                                type="name"
+                                name="name"
+                                label="Full name"
+                                important={'*'}
+                                placeholder="Enter your full name"
+                                errorIcon={<AiOutlineExclamationCircle />}
+                                errorMessage="The name field is required"
+                                required={true}
+                            />
+                            <Input
+                                type="email"
+                                name="email"
+                                label="Email"
+                                important={'*'}
+                                placeholder="Enter your email"
+                                errorIcon={<AiOutlineExclamationCircle />}
+                                errorMessage="The Email field is required"
+                                required={true}
+                            />
+
+                            <Input
+                                type={password ? 'password' : 'text'}
+                                name="password"
+                                label="Password"
+                                important={'*'}
+                                placeholder="Password"
+                                errorIcon={<AiOutlineExclamationCircle />}
+                                errorMessage="The Password field is required"
+                                required={true}
+                                onClick={() => setPassword(!password)}
+                                iconEye={password ? <HiOutlineEye /> : <HiOutlineEyeSlash />}
+                            />
+
                             <div className="flex flex-col mt-6">
                                 <div className="flex items-center">
                                     <div className="form-control">
@@ -76,7 +75,7 @@ const Register = () => {
                         </form>
                         <p className="text-center font-normal">
                             <span>Have an account ?</span>
-                            <Link to="/login" className="red ml-2">
+                            <Link to="/" className="red ml-2">
                                 Login now
                             </Link>
                         </p>

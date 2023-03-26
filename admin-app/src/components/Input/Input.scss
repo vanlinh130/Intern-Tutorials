@@ -1,0 +1,43 @@
+label {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+.icon-eye {
+    bottom: 15px;
+}
+
+.error-icon {
+    color: red;
+    bottom: 42px;
+    display: none;
+}
+
+.error-message {
+    font-size: 12px;
+    font-weight: 300;
+    padding: 4px 0px;
+    color: red;
+    display: none;
+}
+
+input {
+    font-weight: 300;
+}
+
+input:invalid[focused='true'] {
+    border: 1px solid red;
+}
+
+input:invalid[focused='true'] ~ p {
+    display: block;
+}
+
+input:invalid[focused='true'] ~ span {
+    display: block;
+}
+
+input:invalid[focused='true'] ~ .icon-eye {
+    display: none;
+}

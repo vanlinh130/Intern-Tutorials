@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import images from '../../images';
 import { Link } from 'react-router-dom';
-import { LoginLayout } from '../../components';
+import { Input, LoginLayout } from '../../components';
 import { HiOutlineEye, HiOutlineEyeSlash } from 'react-icons/hi2';
 import { BsXLg } from 'react-icons/bs';
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
 const ResetPassword = () => {
     const [password, setPassword] = useState(true);
@@ -15,7 +16,7 @@ const ResetPassword = () => {
                     <img src={images.logo} alt="logo" />
                     <h5 className="ml-2 font-semibold w-5 leading-5">Ecomdy Media</h5>
                 </div>
-                <div className="flex flex-col items-center justify-items-center mt-16">
+                <div className="flex flex-col items-center justify-items-center mt-2">
                     <div className="w-2/4">
                         <div className="flex flex-col items-center">
                             <h1 className="text-3xl font-semibold mb-4">Setup a new password</h1>
@@ -25,39 +26,28 @@ const ResetPassword = () => {
                         </div>
 
                         <form>
-                            <div className="form-control relative">
-                                <label className="label pt-4">
-                                    <span className="label-text">New password</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your new password"
-                                    className="input input-bordered relative"
-                                />
-                                <div
-                                    className="absolute right-0 bottom-4 px-5 cursor-pointer hover:opacity-90 text-slate-500"
-                                    onClick={() => setPassword(!password)}
-                                >
-                                    {password ? <HiOutlineEye /> : <HiOutlineEyeSlash />}
-                                </div>
-                            </div>
-
-                            <div className="form-control relative">
-                                <label className="label pt-4">
-                                    <span className="label-text">Confirm new password</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Confirm your new password"
-                                    className="input input-bordered relative"
-                                />
-                                <div
-                                    className="absolute right-0 bottom-4 px-5 cursor-pointer hover:opacity-90 text-slate-500"
-                                    onClick={() => setPassword(!password)}
-                                >
-                                    {password ? <HiOutlineEye /> : <HiOutlineEyeSlash />}
-                                </div>
-                            </div>
+                            <Input
+                                type={password ? 'password' : 'text'}
+                                name="password"
+                                label="New password"
+                                placeholder="Enter your new password"
+                                errorIcon={<AiOutlineExclamationCircle />}
+                                errorMessage="The Password field is required"
+                                required={true}
+                                onClick={() => setPassword(!password)}
+                                iconEye={password ? <HiOutlineEye /> : <HiOutlineEyeSlash />}
+                            />
+                            <Input
+                                type={password ? 'password' : 'text'}
+                                name="password"
+                                label="Confirm new password"
+                                placeholder="Confirm your new password"
+                                errorIcon={<AiOutlineExclamationCircle />}
+                                errorMessage="The Confirm Password field is required"
+                                required={true}
+                                onClick={() => setPassword(!password)}
+                                iconEye={password ? <HiOutlineEye /> : <HiOutlineEyeSlash />}
+                            />
 
                             <div className="mt-5">
                                 <div className="flex items-center py-3">
@@ -78,7 +68,7 @@ const ResetPassword = () => {
                         </form>
                         <p className="text-center font-normal">
                             <span>Have an account ? </span>
-                            <Link to="/login" className="red ml-2">
+                            <Link to="/" className="red ml-2">
                                 Login now
                             </Link>
                         </p>

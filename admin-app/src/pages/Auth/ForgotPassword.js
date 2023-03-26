@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import images from '../../images';
-import { LoginLayout } from '../../components';
+import { Input, LoginLayout } from '../../components';
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
 const ForgotPassword = () => {
     return (
@@ -21,16 +22,15 @@ const ForgotPassword = () => {
                         </div>
 
                         <form>
-                            <div className="form-control relative">
-                                <label className="label pt-4">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your Email"
-                                    className="input input-bordered relative"
-                                />
-                            </div>
+                            <Input
+                                type="email"
+                                name="email"
+                                label="Email"
+                                placeholder="Enter your email"
+                                errorIcon={<AiOutlineExclamationCircle />}
+                                errorMessage="The Email field is required"
+                                required={true}
+                            />
 
                             <div className="flex flex-col mt-4">
                                 <button className="btn-save text-white font-medium py-3 " type="submit">
